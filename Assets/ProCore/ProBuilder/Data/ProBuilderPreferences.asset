@@ -18,15 +18,22 @@ MonoBehaviour:
   - pbDefaultSelectionMode
   - pb_GIWorkflowMode
   - pbVertexColorTool
-  m_Float_keys: []
+  - pbHandleAlignment
+  m_Float_keys:
+  - pbEditorScroll.x
+  - pbEditorScroll.y
   m_String_keys:
   - pbCurrentMaterialPalette
+  - pbVertexColorPrefs7
   m_Color_keys: []
   m_Material_keys: []
   m_Bool_values: 
-  m_Int_values: 01000000020000000000000000000000
-  m_Float_values: []
+  m_Int_values: 0000000002000000000000000000000000000000
+  m_Float_values:
+  - 0
+  - 0
   m_String_values:
   - Assets/ProCore/ProBuilder/Data/Default Material Palette.asset
+  - RGBA(0.434, 0.236, 0.133, 1.000)
   m_Color_values: []
   m_Material_values: []

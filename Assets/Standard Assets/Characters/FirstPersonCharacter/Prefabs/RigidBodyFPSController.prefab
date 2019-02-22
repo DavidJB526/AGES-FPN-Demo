@@ -91,7 +91,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100004}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83c81407209f85e4c87c0cda8b32868e, type: 3}
   m_Name: 
@@ -245,11 +245,11 @@ MonoBehaviour:
   cam: {fileID: 2000000}
   movementSettings:
     ForwardSpeed: 6
-    BackwardSpeed: 3
-    StrafeSpeed: 3
+    BackwardSpeed: 4
+    StrafeSpeed: 4
     RunMultiplier: 2
-    RunKey: 304
-    JumpForce: 50
+    RunKey: 0
+    JumpForce: 0
     SlopeCurveModifier:
       serializedVersion: 2
       m_Curve:
@@ -285,8 +285,8 @@ MonoBehaviour:
       m_RotationOrder: 4
     CurrentTargetSpeed: 8
   mouseLook:
-    XSensitivity: 1
-    YSensitivity: 1
+    XSensitivity: 2
+    YSensitivity: 2
     clampVerticalRotation: 1
     MinimumX: -45
     MaximumX: 90
