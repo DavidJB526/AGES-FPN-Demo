@@ -11,6 +11,20 @@ public class DetectInteractiveObjects : MonoBehaviour
     [SerializeField]
     private int layerToIgnore = 9;
 
+    public IInteractive LookedAtInteractive
+    {
+        get
+        {
+            return lookedAtInteractive;
+        }
+        set
+        {
+            lookedAtInteractive = value;
+        }
+    }
+
+    private IInteractive lookedAtInteractive;
+
     private void FixedUpdate()
     {
         Debug.DrawRay(raycastOrigin.position, raycastOrigin.forward * maxDetectRange, Color.green);
@@ -18,9 +32,19 @@ public class DetectInteractiveObjects : MonoBehaviour
         RaycastHit hitInfo;
         bool objectDetected = Physics.Raycast(raycastOrigin.position, raycastOrigin.forward, out hitInfo, maxDetectRange);
 
+        IInteractive interactive = null;
+
+        LookedAtInteractive = interactive;
+
         if (objectDetected)
         {
-            Debug.Log($"Player is looking at: {hitInfo.collider.gameObject.name}");
+            //Debug.Log($"Player is looking at: {hitInfo.collider.gameObject.name}");
+            interactive = hitInfo.collider.gameObject.GetComponent<IInteractive>();
+        }
+
+        if (interactive != null)
+        {
+            lookedAtInteractive = interactive;
         }
     }
 }
