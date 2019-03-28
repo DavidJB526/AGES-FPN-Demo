@@ -21,7 +21,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 127
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &6514073787688884501
 Transform:
@@ -346,30 +346,30 @@ MonoBehaviour:
   _tangents: []
   _sharedIndicesUV: []
   _colors:
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0.4, g: 0, b: 1, a: 1}
+  - {r: 0.4, g: 0, b: 1, a: 1}
+  - {r: 0.4, g: 0, b: 1, a: 1}
+  - {r: 0.4, g: 0, b: 1, a: 1}
+  - {r: 0.4, g: 0, b: 1, a: 1}
+  - {r: 0.4, g: 0, b: 1, a: 1}
+  - {r: 0.4, g: 0, b: 1, a: 1}
+  - {r: 0.4, g: 0, b: 1, a: 1}
+  - {r: 0.4, g: 0, b: 1, a: 1}
+  - {r: 0.4, g: 0, b: 1, a: 1}
+  - {r: 0.4, g: 0, b: 1, a: 1}
+  - {r: 0.4, g: 0, b: 1, a: 1}
+  - {r: 0.4, g: 0, b: 1, a: 1}
+  - {r: 0.4, g: 0, b: 1, a: 1}
+  - {r: 0.4, g: 0, b: 1, a: 1}
+  - {r: 0.4, g: 0, b: 1, a: 1}
+  - {r: 0.4, g: 0, b: 1, a: 1}
+  - {r: 0.4, g: 0, b: 1, a: 1}
+  - {r: 0.4, g: 0, b: 1, a: 1}
+  - {r: 0.4, g: 0, b: 1, a: 1}
+  - {r: 0.4, g: 0, b: 1, a: 1}
+  - {r: 0.4, g: 0, b: 1, a: 1}
+  - {r: 0.4, g: 0, b: 1, a: 1}
+  - {r: 0.4, g: 0, b: 1, a: 1}
   userCollisions: 0
   isSelectable: 1
   unwrapParameters:
@@ -408,7 +408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1dce9f7017d6054dbbabdbab26ac290, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayText: InteractiveObject
+  displayText: Toggle Donut
   objectToToggle: {fileID: 0}
   isReusable: 1
 --- !u!82 &6387267729783422672
