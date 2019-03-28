@@ -326,9 +326,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf7a06632502eb34c9bf37c49043f896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  raycastOrigin: {fileID: 0}
+  raycastOrigin: {fileID: 400000}
   maxDetectRange: 3
-  layerToIgnore: 9
 --- !u!1001 &940987271
 PrefabInstance:
   m_ObjectHideFlags: 0
