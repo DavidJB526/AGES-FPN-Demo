@@ -178,8 +178,8 @@ GameObject:
   - component: {fileID: 5400000}
   - component: {fileID: 13600000}
   - component: {fileID: 11400004}
-  - component: {fileID: 884773869}
   - component: {fileID: 9165974879598206519}
+  - component: {fileID: 18500719127476725}
   m_Layer: 0
   m_Name: RigidBodyFPSController
   m_TagString: Untagged
@@ -302,21 +302,6 @@ MonoBehaviour:
     slowDownRate: 20
     airControl: 0
     shellOffset: 0
---- !u!114 &884773869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8302b407032d3ec48a3819d717e2a07e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  raycastOrigin: {fileID: 400000}
-  maxDetectRange: 3
-  layerToIgnore: 9
 --- !u!114 &9165974879598206519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -329,6 +314,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33c7d311b7f79134e960d53571d48b80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &18500719127476725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf7a06632502eb34c9bf37c49043f896, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  raycastOrigin: {fileID: 0}
+  maxDetectRange: 3
+  layerToIgnore: 9
 --- !u!1001 &940987271
 PrefabInstance:
   m_ObjectHideFlags: 0

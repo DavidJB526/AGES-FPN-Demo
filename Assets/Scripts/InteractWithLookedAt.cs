@@ -8,19 +8,31 @@ using UnityEngine;
 /// </summary>
 public class InteractWithLookedAt : MonoBehaviour
 {
-    private DetectInteractiveObjects detectInteractiveObjects;
-
-    private void Start()
-    {
-        detectInteractiveObjects = this.gameObject.GetComponent<DetectInteractiveObjects>();
-    }
+    private IInteractive lookedAtInteractive;
 
     private void Update()
     {
-        if (Input.GetButtonDown("Interact") && detectInteractiveObjects.LookedAtInteractive != null)
+        if (Input.GetButtonDown("Interact") && lookedAtInteractive != null)
         {
             Debug.Log($"Player pressed the Interact button");
-            detectInteractiveObjects.LookedAtInteractive.InteractWith();
+            lookedAtInteractive.InteractWith();
         }
     }
+
+    private void OnLookedAtInteractiveChanged(IInteractive newLookedAtInteractive)
+    {
+        lookedAtInteractive = newLookedAtInteractive;
+    }
+
+    #region Event subscription / unsubscription
+    private void OnEnable()
+    {
+        DetectLookedAtInteractive.LookedAtInteractiveChanged += OnLookedAtInteractiveChanged;
+    }
+
+    private void OnDisable()
+    {
+        DetectLookedAtInteractive.LookedAtInteractiveChanged -= OnLookedAtInteractiveChanged;
+    }
+    #endregion
 }
