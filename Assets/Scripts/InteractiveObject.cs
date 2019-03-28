@@ -6,7 +6,7 @@ using UnityEngine;
 public class InteractiveObject : MonoBehaviour, IInteractive
 {
     [SerializeField]
-    private string displayText = nameof(InteractiveObject);
+    protected string displayText = nameof(InteractiveObject);
 
     public string DisplayText => displayText;
 
@@ -17,7 +17,7 @@ public class InteractiveObject : MonoBehaviour, IInteractive
         audioSource = GetComponent<AudioSource>();
     }
 
-    public void InteractWith()
+    public virtual void InteractWith()
     {
         Debug.Log($"Player just interacted with {gameObject.name}");
         audioSource.Play();
