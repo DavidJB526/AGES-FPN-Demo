@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Scenes/TitleMenu.unity
+    path: Assets/_Scenes/MainMenu.unity
     guid: 1ae8906d023e09843b99b056c1d54811
   - enabled: 1
     path: Assets/_Scenes/MessHall.unity
