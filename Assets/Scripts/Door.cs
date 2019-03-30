@@ -5,6 +5,18 @@ using UnityEngine;
 [RequireComponent(typeof(Animator))]
 public class Door : InteractiveObject
 {
+    [SerializeField]
+    private bool isLocked;
+    [SerializeField]
+    private string lockedDisplayText = "Locked";
+
+    [SerializeField]
+    private AudioClip doorOpenClip;
+    [SerializeField]
+    private AudioClip doorLockedClip;
+
+    public override string DisplayText => isLocked ? lockedDisplayText : base.DisplayText;
+
     private Animator anim;
     private int shouldOpenAnimParameter = Animator.StringToHash("shouldOpen");
 
@@ -24,7 +36,16 @@ public class Door : InteractiveObject
 
     public override void InteractWith()
     {
+        if (!isLocked)
+        {
+            audioSource.clip = doorOpenClip;
+            anim.SetBool(shouldOpenAnimParameter, !anim.GetBool(shouldOpenAnimParameter));
+        }
+        else
+        {
+            audioSource.clip = doorLockedClip;
+        }
+
         base.InteractWith();
-        anim.SetBool(shouldOpenAnimParameter, !anim.GetBool(shouldOpenAnimParameter));
     }
 }

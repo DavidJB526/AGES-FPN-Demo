@@ -1334,7 +1334,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c7b94e395a5ae7c4496e3da428705431, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.8
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1431,6 +1431,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displayText: Door
+  isLocked: 1
+  lockedDisplayText: Locked
+  doorOpenClip: {fileID: 8300000, guid: c7b94e395a5ae7c4496e3da428705431, type: 3}
+  doorLockedClip: {fileID: 8300000, guid: 3ddb6b99ea1cd154cb1416db14d8e3f4, type: 3}
 --- !u!43 &194182808
 Mesh:
   m_ObjectHideFlags: 0
@@ -1983,7 +1987,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh36076
+  m_Name: pb_Mesh4664
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -3807,6 +3811,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 941085869, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -21734,7 +21742,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-78668
+  m_Name: pb_Mesh4544
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -22394,7 +22402,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh35974
+  m_Name: pb_Mesh4558
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2

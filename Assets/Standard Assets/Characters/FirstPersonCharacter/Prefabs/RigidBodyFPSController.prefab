@@ -327,7 +327,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   raycastOrigin: {fileID: 400000}
-  maxDetectRange: 3
+  maxDetectRange: 2.5
 --- !u!1001 &940987271
 PrefabInstance:
   m_ObjectHideFlags: 0
