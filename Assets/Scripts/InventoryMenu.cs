@@ -1,15 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityStandardAssets.Characters.FirstPerson;
+using TMPro;
 
 public class InventoryMenu : MonoBehaviour
 {
     [SerializeField]
     private GameObject inventoryMenuItemTogglePrefab;
+    [SerializeField]
+    private Transform inventoryListContentArea;
+    [SerializeField]
+    private TextMeshProUGUI itemLabelText;
+    [SerializeField]
+    private TextMeshProUGUI itemDescriptionAreaText;
 
     private static InventoryMenu instance;
-
     public static InventoryMenu Instance
     {
         get
@@ -27,6 +34,7 @@ public class InventoryMenu : MonoBehaviour
     private AudioSource audioSource;
     private CanvasGroup canvasGroup;
     private RigidbodyFirstPersonController rigidbodyFirstPersonController;
+
     private bool IsVisible => canvasGroup.alpha > 0;
 
     private void Awake()
@@ -42,7 +50,7 @@ public class InventoryMenu : MonoBehaviour
 
         audioSource = GetComponent<AudioSource>();
         canvasGroup = GetComponent<CanvasGroup>();
-        rigidbodyFirstPersonController = FindObjectOfType<RigidbodyFirstPersonController>();   
+        rigidbodyFirstPersonController = FindObjectOfType<RigidbodyFirstPersonController>();
     }
 
     private void Start()
@@ -88,6 +96,25 @@ public class InventoryMenu : MonoBehaviour
         audioSource.Play();
     }
 
+    /// <summary>
+    /// This is the event handler for InventoryMenuItemSelected
+    /// </summary>
+    private void OnInventoryMenuItemSelected(InventoryObject inventoryObjectThatWasSelected)
+    {
+        itemLabelText.text = inventoryObjectThatWasSelected.ObjectName;
+        itemDescriptionAreaText.text = inventoryObjectThatWasSelected.Description;
+    }
+
+    private void OnEnable()
+    {
+        InventoryMenuItemToggle.InventoryMenuItemSelected += OnInventoryMenuItemSelected;
+    }
+
+    private void OnDisable()
+    {
+        InventoryMenuItemToggle.InventoryMenuItemSelected -= OnInventoryMenuItemSelected;
+    }
+
     public void ExitButton()
     {
         HideMenu();
@@ -99,7 +126,9 @@ public class InventoryMenu : MonoBehaviour
     /// <param name="inventoryObjectToAdd"></param>
     public void AddItemToMenu(InventoryObject inventoryObjectToAdd)
     {
-        Instantiate(inventoryMenuItemTogglePrefab);
+        GameObject clone = Instantiate(inventoryMenuItemTogglePrefab, inventoryListContentArea);
+        InventoryMenuItemToggle toggle = clone.GetComponent<InventoryMenuItemToggle>();
+        toggle.AssociatedInventoryObject = inventoryObjectToAdd;
     }
 
     private IEnumerator WaitForAudioClip()
