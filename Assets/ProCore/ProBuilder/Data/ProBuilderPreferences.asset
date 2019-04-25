@@ -23,6 +23,8 @@ MonoBehaviour:
   m_Float_keys:
   - pbEditorScroll.x
   - pbEditorScroll.y
+  - pbBevelAmount
+  - pbWeldDistance
   m_String_keys:
   - pbCurrentMaterialPalette
   - pbVertexColorPrefs7
@@ -33,6 +35,8 @@ MonoBehaviour:
   m_Float_values:
   - 0
   - 0
+  - 0.5
+  - 0.5
   m_String_values:
   - Assets/ProCore/ProBuilder/Data/Default Material Palette.asset
   - RGBA(0.434, 0.236, 0.133, 1.000)
