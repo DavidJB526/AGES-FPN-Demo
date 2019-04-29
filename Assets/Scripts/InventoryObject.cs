@@ -13,8 +13,6 @@ public class InventoryObject : InteractiveObject
 
     [SerializeField]
     private Sprite icon;
-    // TODO: Add long description field
-    // TODO: Add icon field
 
     public string ObjectName => objectName;
     public string Description => description;
