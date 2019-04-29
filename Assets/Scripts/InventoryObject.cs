@@ -7,10 +7,16 @@ public class InventoryObject : InteractiveObject
     [SerializeField]
     private string objectName = nameof(InventoryObject);
 
-    // TODO: Add long description field
-    // TODO: Add icon field
+    [SerializeField]
+    [TextArea(3,8)]
+    private string description;
+
+    [SerializeField]
+    private Sprite icon;
 
     public string ObjectName => objectName;
+    public string Description => description;
+    public Sprite Icon => icon;
 
     private new Renderer renderer;
     private new Collider collider;
@@ -35,7 +41,9 @@ public class InventoryObject : InteractiveObject
     {
         base.InteractWith();
         PlayerInventory.InvetoryObjects.Add(this);
+        InventoryMenu.Instance.AddItemToMenu(this);
         renderer.enabled = false;
         collider.enabled = false;
+        Debug.Log($"Inventory menu game object name {InventoryMenu.Instance.name}");
     }
 }
