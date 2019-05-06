@@ -1663,14 +1663,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3476777259196990043}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.70710677}
   m_LocalPosition: {x: 10.418989, y: 0, z: 1.5134068}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1870712533781701208}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
 --- !u!114 &6638441852947332980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1689,7 +1689,7 @@ MonoBehaviour:
   consumesKey: 0
   lockedDisplayText: Locked
   doorOpenClip: {fileID: 0}
-  doorLockedClip: {fileID: 0}
+  doorLockedClip: {fileID: 8300000, guid: 576f1d25a5d10c0488fa2aadca0ba944, type: 3}
 --- !u!95 &7667503350838464926
 Animator:
   serializedVersion: 3
@@ -1720,7 +1720,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

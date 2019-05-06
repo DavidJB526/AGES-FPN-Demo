@@ -1257,7 +1257,7 @@ GameObject:
   - component: {fileID: 4942181694938562098}
   - component: {fileID: 4942181694938562101}
   m_Layer: 0
-  m_Name: SmallDoor
+  m_Name: SmallDoorOpen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1295,7 +1295,7 @@ MonoBehaviour:
   isLocked: 0
   consumesKey: 0
   lockedDisplayText: Locked
-  doorOpenClip: {fileID: 0}
+  doorOpenClip: {fileID: 8300000, guid: 3404dd008d0be0749a67e06528210382, type: 3}
   doorLockedClip: {fileID: 0}
 --- !u!95 &4942181694938562099
 Animator:
@@ -1327,7 +1327,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

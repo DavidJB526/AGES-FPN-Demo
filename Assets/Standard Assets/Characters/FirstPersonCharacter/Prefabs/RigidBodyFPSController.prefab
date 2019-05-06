@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 18500719127476725}
   m_Layer: 0
   m_Name: RigidBodyFPSController
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -301,7 +301,7 @@ MonoBehaviour:
     stickToGroundHelperDistance: 0.6
     slowDownRate: 20
     airControl: 0
-    shellOffset: 0
+    shellOffset: 0.1
 --- !u!114 &9165974879598206519
 MonoBehaviour:
   m_ObjectHideFlags: 0
