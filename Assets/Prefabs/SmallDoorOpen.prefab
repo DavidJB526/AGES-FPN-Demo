@@ -1296,7 +1296,7 @@ MonoBehaviour:
   consumesKey: 0
   lockedDisplayText: Locked
   doorOpenClip: {fileID: 8300000, guid: 3404dd008d0be0749a67e06528210382, type: 3}
-  doorLockedClip: {fileID: 0}
+  doorLockedClip: {fileID: 8300000, guid: 576f1d25a5d10c0488fa2aadca0ba944, type: 3}
 --- !u!95 &4942181694938562099
 Animator:
   serializedVersion: 3
@@ -1328,7 +1328,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0

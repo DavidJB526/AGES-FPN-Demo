@@ -5,7 +5,7 @@ using UnityEngine;
 public class ToggleSetActive : InteractiveObject
 {
     [SerializeField]
-    private GameObject objectToToggle;
+    private GameObject[] objectsToToggle;
     [SerializeField]
     private bool isReusable = true;
 
@@ -16,7 +16,10 @@ public class ToggleSetActive : InteractiveObject
         if (isReusable || !hasBeenUsed)
         {
             base.InteractWith();
-            objectToToggle.SetActive(!objectToToggle.activeSelf);
+            foreach (GameObject ob in objectsToToggle)
+            {
+                ob.SetActive(!ob.activeSelf);
+            }
             hasBeenUsed = true;
             if (!isReusable)
             {
