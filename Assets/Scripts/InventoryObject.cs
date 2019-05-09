@@ -18,13 +18,17 @@ public class InventoryObject : InteractiveObject
     public string Description => description;
     public Sprite Icon => icon;
 
-    private new Renderer renderer;
-    private new Collider collider;
+    private new Renderer[] renderers;
+    private new Renderer[] childRenderers;
+    private new Collider[] colliders;
+    private new Light light;
 
     private void Start()
     {
-        renderer = GetComponent<Renderer>();
-        collider = GetComponent<Collider>();
+        renderers = GetComponents<Renderer>();
+        childRenderers = GetComponentsInChildren<Renderer>();
+        colliders = GetComponents<Collider>();
+        light = GetComponentInChildren<Light>();
     }
 
     public InventoryObject()
@@ -42,8 +46,19 @@ public class InventoryObject : InteractiveObject
         base.InteractWith();
         PlayerInventory.InvetoryObjects.Add(this);
         InventoryMenu.Instance.AddItemToMenu(this);
-        renderer.enabled = false;
-        collider.enabled = false;
+        foreach (Renderer r in renderers)
+        {
+            r.enabled = false;
+        }
+        foreach (Renderer r in childRenderers)
+        {
+            r.enabled = false;
+        }
+        foreach (Collider c in colliders)
+        {
+            c.enabled = false;
+        }
+        light.enabled = false;
         Debug.Log($"Inventory menu game object name {InventoryMenu.Instance.name}");
     }
 }

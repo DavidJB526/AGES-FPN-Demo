@@ -177,7 +177,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             else
             {
-                m_RigidBody.drag = 0f;
+                m_RigidBody.drag = 0.5f;
                 if (m_PreviouslyGrounded && !m_Jumping)
                 {
                     StickToGroundHelper();

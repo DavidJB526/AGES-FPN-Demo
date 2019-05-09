@@ -199,7 +199,7 @@ AnimationClip:
   m_Events:
   - time: 0.5833333
     functionName: LoadGameScene
-    data: MessHall
+    data: HorrorGameMainScene
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0

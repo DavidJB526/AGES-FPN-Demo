@@ -8,6 +8,8 @@ public class Door : InteractiveObject
     [SerializeField]
     private InventoryObject key;
     [SerializeField]
+    private bool isLocked;
+    [SerializeField]
     private bool consumesKey;
     [SerializeField]
     private string lockedDisplayText = "Locked";
@@ -42,7 +44,6 @@ public class Door : InteractiveObject
 
     private Animator anim;
     private int shouldOpenAnimParameter = Animator.StringToHash("shouldOpen");
-    private bool isLocked;
 
     /// <summary>
     /// Using a contructor here to initialize displayText in the Editor
@@ -61,7 +62,7 @@ public class Door : InteractiveObject
 
     private void InitializeIsLocked()
     {
-        if (key != null)
+        if (key != null || isLocked)
         {
             isLocked = true;
         }
